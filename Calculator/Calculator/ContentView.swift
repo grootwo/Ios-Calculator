@@ -10,14 +10,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Button("0") {
-                print("0 clicked")
+            HStack {
+                Text("0")
+                    .font(.largeTitle)
             }
-            .font(.largeTitle)
-            .padding(30)
-            .foregroundColor(.white)
-            .background(.orange)
-            .clipShape(Circle())
+            VStack {
+                HStack {
+                    CustomButton(text: "AC", image: nil, isOrange: false, isGray: true)
+                    CustomButton(text: nil, image: "plus.forwardslash.minus", isOrange: false, isGray: true)
+                    CustomButton(text: nil, image: "percent", isOrange: false, isGray: true)
+                    CustomButton(text: nil, image: "divide", isOrange: true, isGray: false)
+                }
+            }
         }
         .padding()
     }
