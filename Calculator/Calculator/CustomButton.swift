@@ -18,7 +18,7 @@ struct CustomButton: View {
         }, label: {            
             if let text = text {
                 Text(text)
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
             }
             if let image = image {
                Image(systemName: image)
@@ -28,7 +28,7 @@ struct CustomButton: View {
         .frame(width: 60, height: 60)
         .padding(10)
         .foregroundColor(.white)
-        .background(isOrange ? .orange : (isGray ? .gray : .black))
+        .background(isOrange ? .orange : (isGray ? .gray : .secondary))
         .clipShape(Circle())
     }
 }
