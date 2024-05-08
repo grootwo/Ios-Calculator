@@ -13,9 +13,9 @@ struct CustomButton: View {
     let isOrange: Bool
     let isGray: Bool
     var body: some View {
-        Button(action: {                
-            print("0 clicked")
-        }, label: {            
+        Button(action: {
+            
+        }, label: {
             if let text = text {
                 Text(text)
                     .font(.title)
